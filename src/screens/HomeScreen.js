@@ -3,10 +3,11 @@ import {StyleSheet, Text, View, Button} from 'react-native';
 
 const HomeScreen = ({navigation}) => {
     return (
-        <View>
+        <View style={styles.menu}>
             <Button
                 onPress={() => navigation.navigate ('Components')}
                 title="Components"
+                type="clear"
             />
             <Button
                 title="List"
@@ -20,8 +21,24 @@ const HomeScreen = ({navigation}) => {
                 title="Counter"
                 onPress={() => navigation.navigate('Counter')}
             />
+            <Button
+                title="Color"
+                onPress={() => navigation.navigate('Color')}
+            />
+            <Button
+                title="Square"
+                onPress={() => navigation.navigate('Square')}
+            />
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    menu: {
+        flex: 1, 
+        flexDirection: 'column',
+        padding: 5
+    }
+});
 
 export default HomeScreen;
