@@ -29,6 +29,10 @@ const HomeScreen = ({navigation}) => {
                 title="Square"
                 onPress={() => navigation.navigate('Square')}
             />
+             <Button
+                title="Text"
+                onPress={() => navigation.navigate('Text')}
+            />
         </View>
     );
 };
@@ -37,7 +41,9 @@ const styles = StyleSheet.create({
     menu: {
         flex: 1, 
         flexDirection: 'column',
-        padding: 5
+        padding: 5,
+        borderColor: 'white',
+        borderWidth: 1
     }
 });
 
